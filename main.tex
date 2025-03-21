@@ -7,88 +7,136 @@
 \usepackage[top=0.3in, bottom=0.0in, left=0.4in, right=0.3in]{geometry}
 \usepackage{titlesec}
 \usepackage{mathptmx} % Times New Roman font
+\usepackage{array} % For better table formatting
+\usepackage{booktabs} % For professional tables with no vertical lines
+\usepackage{graphicx} % For including images
 
 % Format for section titles: Regular text and 11pt font size
 \titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{2pt}{1ex}{0.5ex} % Reduce spacing before and after sections
+\titlespacing{\section}{2pt}{1ex}{1ex} % Reduce spacing before and after sections
 
 \renewcommand{\baselinestretch}{1.0} % Line spacing adjustment
 \setlength{\parindent}{0pt} % Remove paragraph indent
 \setlength{\parskip}{0pt} % Reduce space between paragraphs
 \setlist[itemize]{noitemsep, topsep=0pt, label={\textbf{{\tiny$\blacktriangleright$}}}, left=1em} % Set triangle bullet and indent
 
+% Define column types for the skills table
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 \begin{document}
 
 \begin{center}
-    \textbf{Arya Garg}\\
-    (513)-641-7489 $\cdot$ \texttt{garga3@mail.uc.edu} $\cdot$ https://www.linkedin.com/in/aryagarg23/ $\cdot$ https://github.com/Aryagarg23
+    \LARGE\textbf{Arya Garg}\\
+    \normalsize (513)-641-7489 $\cdot$ garga3@mail.uc.edu $\cdot$ linkedin.com/in/aryagarg23/ $\cdot$ github.com/Aryagarg23
 \end{center}
+
 
 \section*{Education}
-\textbf{University of Cincinnati} \hfill \textit{Cincinnati, OH: Aug 22 - May 27} \\
-\textit{M. Eng. Artificial Intelligence} \\
-\textit{B.S. Computer Science} \
 
-\section*{Skillset}
-\textbf{Programming Languages \& Frameworks:} Python, Dart \& Flutter, C++, Haskell, Go, Prolog, LabVIEW, MATLAB, VBA, MySQL, PostgreSQL, neo4j (cypher), javascript, HTML CSS, React.js
+\noindent
+    \textbf{University of Cincinnati} \hfill \textit{Cincinnati, OH: Aug 22- May 27} \\
+\begin{minipage}[t]{0.26\textwidth}
 
-\textbf{Tools \& Software:} GitHub, git, Docker, Looker, Google Analytics, Google Cloud Platform (GCP), Oracle Cloud, KPI Dashboards, Twilio, WSL, bash, huggingface, encoders \& decoders, vector embeddings, MSOffice, Kerbal Space Program
-
-\textbf{Mechanical \& Industrial Competencies:} CAD, 3D Printing and Scanning, Laser Cutting, Woodshop, Soldering
+    \textit{M. Eng. Artificial Intelligence} \\
+    \textit{B.S. Computer Science}
+\end{minipage}
+\begin{minipage}[t]{0.70\textwidth}
+    \textbf{Courses:} Database Design, Algorithms, Programming Languages, Operating Systems, 
+    Linear Algebra, ML \& AI, 
+    Data Structures, Computer Architecture, Software Engineering
+\end{minipage}
 
 \section*{Experience}
-\textbf{Data Science Intern: Possip} (Mentor: Adam Thede, \texttt{adam@possip.com}) \hfill \textit{Cincinnati, OH: Summer 24 \& Fall 23}
+\textbf{Data Science: Possip} \includegraphics[height=1em]{possip-logo.png}  \hfill \textit{Cincinnati, OH: Summer - Fall 23}
+
 \begin{itemize}
-    \item Deployed a Flask application with JavaScript front-end elements on GCP to automate reporting and streamline the customer import process which resulted in a 400\% faster workflow
-    \item Processed 2M+ rows of contact records distributed across multiple schools and districts 
-    \item Maintained and optimized database integrity and data import processes by introducing new processes
-    \item Worked with external vendors like Twillio and ClassLink as a tech team representative
+    \item Deployed a \textbf{Flask} application with \textbf{React} front-end elements on \textbf{GCP} to automate reporting and streamline the customer import process which resulted in a \textbf{400\%}\textbf{ faster workflow}
+    \item Processed \textbf{3M+} \textbf{rows} of contact records, onboarding \textbf{1M+} \textbf{new users} while optimizing database integrity with \textbf{new error correction methods}
+    \item Performed sentiment analysis on feedback using \textbf{BERT}, incorporating category-based bucketing and \textbf{Matplotlib/Pandas} visualizations for structured insights
 \end{itemize}
 
-\textbf{ADCS Software Developer - CubeCats} \hfill \textit{Cincinnati, OH: Aug 2024 – Present, }
-\begin{itemize}
-    \item Develop simulation software for Passive Attitude Determination and Control Systems (ADCS) for CubeSats (partnering with NASA \& nanoracks), utilizing Pandas, NumPy, and Scikit-learn for data analysis with over 50M rows of data
-    \item Simulate magnetic hysteresis effects in realtime through Python to feed into CubeSat attitude control systems 14ms latency
-    \item Collaborate with interdisciplinary teams to refine simulation models and ensure alignment with mission objectives
-\end{itemize}
+\vspace{0.5em}
 
-\textbf{Student Researcher: UHP Discover} \hfill \textit{Cincinnati, OH: Summer 23}
+\textbf{Student Researcher: UHP Discover} \includegraphics[height=1em]{uhp-logo.png} \hfill \textit{Cincinnati, OH: Summer 23}
 \begin{itemize}
+    \item Worked on knapsack problems and video summarization techniques and summarized \textbf{50 videos with a 93\% f-score}
     \item Bench-marked transformer models, including LLama, ChatGPT, JasperAI, Dall-E, Imagen, and diffusion models
-    \item Worked on knapsack problems and video summarization techniques and summarized 50 videos with a 93\% f-score
 \end{itemize}
 
 
-\section*{Hackathons \& Projects}
-\textbf{Memento:} GCP, Huggingface, AI Integration, Postgres, RAG
+\section*{Projects}
+
+\textbf{LEOPARD-Sat:} \includegraphics[height=1em]{leopard-logo.png}  \textit{C, Proteus, Schematic Design, Systems Engineering }\hfill \textit{Cincinnati, OH: Jun 2022 – Present }
 \begin{itemize}
-    \item Deployed a memory assistant on andriod hosted on GCP, integrating memory and retrieval based AI responses to aid Alzheimer's patients. Memento won Best Social, Health, Postgres, and 3\textsuperscript{rd} Overall at RevUC
+    \item Developed a \textbf{NASA-affiliated satellite} to assess the effectiveness of advanced radioactive shielding techniques for long-duration space missions.
+    \item Develop simulation software for Passive Attitude Determination and Control Systems (ADCS) for CubeSats (partnering with nanoracks), utilizing \textbf{Pandas, NumPy, and Scikit-learn} for data analysis with over \textbf{50M rows of data}
 \end{itemize}
 
-\textbf{Buycott:} GCP, Flask, GDELT, Roberta LLM, Google AI Vision Toolkit, REST API, Sentiment Analysis
-\begin{itemize}
-    \item GCP-hosted Flask app using wikipedia and GDELT API, categorizing Fortune 100 companies by global issue stances via sentiment analysis and text classification with Roberta LLM to give users unbiased information. 1\textsuperscript{st} overall and 4x category
-\end{itemize}
 
-\textbf{WhiteBox:} GCP, Neo4j, Flask, LLM Integration \& finetuning, Data Visualization
+\vspace{0.5em}
+
+\textbf{WhiteBox:} \includegraphics[height=1em]{whitebox-logo.png}\textit{ GCP, Neo4j, Flask, LLM Integration \& finetuning, Data Visualization}
 \begin{itemize}
     \item 1st place winner of the Midwest Con - Future of Data Hackathon - 5000\$
-    \item Built an explainable AI platform that transforms structured data into graphs, making AI decisions transparent
-    \item Created 70,000 nodes with 40,000 links to enable conceptual queries beyond raw vector searches
-    \item Engineered data pipelines with Neo4j and fine-tuned LLMs (LLaMA, MiniLM, Phi3, OpenAI) for structured data retrieval and intelligent responses to reduce hallucinations by 99\% 
+    \item Created \textbf{70,000 nodes with 140,000 links} to enable conceptual queries beyond raw vector searches, transforming structured data into explainable AI decision graphs
+    \item Engineered data pipelines with Neo4j and fine-tuned LLMs (LLaMA, MiniLM, Phi3, OpenAI) for structured data retrieval to \textbf{reduce hallucinations by 99\%}
 \end{itemize}
-\section*{Leadership \& Community}
-\textbf{CubeCats: Vice President} \hfill \textit{Cincinnati, OH: May 23 - Present}
+\vspace{0.5em}
+
+\textbf{Memento:} \includegraphics[height=1em]{memento-logo.png} \textit{GCP, Huggingface, AI Integration, Postgres, RAG}
 \begin{itemize}
-    \item Started Project Calico to teach freshman students how to become self-starters \& leaders in a high-impact project (detailed analysis of light \& air pollution with a ground station for real-time comms)
-    \item Maintained the club website and media-team by modernizing the design and increasing efficiency to boost interest from students and companies looking to collaborate by 1114\%
+    \item Deployed a memory assistant on andriod hosted on GCP, integrating \textbf{memory and retrieval based AI responses} to aid Alzheimer's patients. Best Social, Health, Postgres, and 3\textsuperscript{rd} Overall at RevUC
 \end{itemize}
-\section*{Achievements}
-\textbf{Next Innovation Scholar:} The premier on-campus, post-disciplinary, user-centric design consultancy\\
-\textbf{International Artificial Intelligence Olympiad (2020-21):} 2\textsuperscript{nd} Place \\
-\textbf{Awards:} Dean's List, CEAS International Outreach Scholar, UC Global Scholar, and UHP Scholar, 6x hackathon winner\\
-\begin{center}
-\textit{Applying for internships during Summer 25}
-\end{center}
+
+\vspace{0.5em}
+
+\textbf{Hackathons:} \includegraphics[height=1em]{hackathon-logo.png} \textit{6x Winner across Data Science, AI, and Software Development}
+\begin{itemize}
+    \item Led teams through tight deadlines, leveraging \textbf{rapid prototyping} and \textbf{agile prioritization} to deliver impactful solutions
+\end{itemize}
+
+\vspace{0.5em}
+
+\section*{Leadership \& Community}
+\textbf{CubeCats: Vice President} \includegraphics[height=1em]{cubecats-logo.png} \hfill \textit{Cincinnati, OH: May 23 - Present}
+\begin{itemize}
+    \item Started Project Calico to \textbf{teach 50+ freshman students} how to become self-starters \& leaders in a high-impact project (detailed analysis of light \& air pollution with a ground station for real-time comms)
+    \item Maintained the club website and media-team by modernizing the design and increasing efficiency to boost interest from students and companies looking to collaborate by \textbf{1114\%}
+\end{itemize}
+
+\section*{Skillset}
+
+\begin{tabular}{@{}p{0.32\textwidth}p{0.32\textwidth}p{0.32\textwidth}@{}}
+\textbf{Languages \& Development} & \textbf{Technologies \& Platforms} & \textbf{Specializations \& Methodologies} \\
+
+\begin{tabular}[t]{@{}p{0.16\textwidth}p{0.16\textwidth}@{}}
+Python, Prolog& React.js \\
+JavaScript & Dart \& Flutter \\
+C++, C, C\# & REST APIs \\
+HTML, CSS & Microservices \\
+Go, Haskell & Git, GitHub \\
+MATLAB & Docker \\
+ & Kubernetes \\
+\end{tabular} &
+\begin{tabular}[t]{@{}p{0.16\textwidth}p{0.16\textwidth}@{}}
+Google Cloud & Bash \\
+Oracle Cloud & Huggingface \\
+Azure, AWS & Vectors \\
+PostgreSQL & Looker \\
+SQL, NoSQL & KPI Dashboards \\
+GraphQL & Google Analytics \\
+Neo4j (Cypher) & Selenium \\
+\end{tabular} &
+\begin{tabular}[t]{@{}p{0.16\textwidth}p{0.16\textwidth}@{}}
+Neural Networks & Full-stack \\
+Transformers & Unit Testing \\
+Machine Learning & Cloud Architecture \\
+NLP, NLU & Agile Methodology \\
+Computer Vision & Data Engineering \\
+ \textbf{Kerbal Space}& ETL Processes \\
+ \textbf{Program}& Algorithms \\
+ & Data Structures \\
+\end{tabular} \\
+\end{tabular}
 
 \end{document}
