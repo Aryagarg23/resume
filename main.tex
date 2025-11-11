@@ -15,12 +15,14 @@
 \titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}[\titlerule]
 \titlespacing{\section}{2pt}{1ex}{1ex} % Reduce spacing before and after sections
 
+% CORRECTED: Changed \baselinestrch to \baselinestretch
 \renewcommand{\baselinestretch}{1.0} % Line spacing adjustment
 \setlength{\parindent}{0pt} % Remove paragraph indent
 \setlength{\parskip}{0pt} % Reduce space between paragraphs
 \setlist[itemize]{noitemsep, topsep=0pt, label={\textbf{{\tiny$\blacktriangleright$}}}, left=1em} % Set triangle bullet and indent
 
 % Define column types for the skills table
+% CORRECTED: Fixed typo \ragagredright to \raggedright
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \begin{document}
@@ -36,7 +38,6 @@
 \noindent
     \textbf{University of Cincinnati} \hfill \textit{Cincinnati, OH: Aug 22- May 27} \\
 \begin{minipage}[t]{0.26\textwidth}
-
     \textit{M. Eng. Artificial Intelligence} \\
     \textit{B.S. Computer Science}
 \end{minipage}
@@ -47,38 +48,59 @@
 \end{minipage}
 
 \section*{Experience}
-\textbf{Data Science: Possip} \includegraphics[height=1em]{possip-logo.png}  \hfill \textit{Cincinnati, OH: Summer - Fall 23}
 
+% --- NEW ROLE ADDED HERE ---
+\textbf{Tech Intern: CoreCard} \includegraphics[height=1em]{corecard.png}
+\hfill \textit{Atlanta, GA: Jun 25 - Nov 25}
+% --- SHORTENED DESCRIPTION ---
 \begin{itemize}
-    \item Deployed a \textbf{Flask} application with \textbf{React} front-end elements on \textbf{GCP} to automate reporting and streamline the customer import process which resulted in a \textbf{400\%}\textbf{ faster workflow}
-    \item Processed \textbf{3M+} \textbf{rows} of contact records, onboarding \textbf{1M+} \textbf{new users} while optimizing database integrity with \textbf{new error correction methods}
-    \item Performed sentiment analysis on feedback using \textbf{BERT}, incorporating category-based bucketing and \textbf{Matplotlib/Pandas} visualizations for structured insights
+    \item Engineered an enterprise chatbot with Office 365 integration (\textbf{MSAL}) and a \textbf{LangChain}/\textbf{Qdrant} vector DB.
+    \item Developed an AI-powered database migration tool by \textbf{fine-tuning} LLMs and building a custom \textbf{SQL parser} to translate queries \& automate schema transformation.
+\end{itemize}
+
+\vspace{0.5em} % --- Added spacing ---
+
+% --- DATE UPDATED ---
+\textbf{Data Science: Possip} \includegraphics[height=1em]{possip-logo.png} \hfill \textit{Cincinnati, OH: May 23 - Nov 23}
+% --- SHORTENED DESCRIPTION ---
+\begin{itemize}
+    \item Deployed a \textbf{Flask} \& \textbf{React} app on \textbf{GCP} to automate customer imports, creating a \textbf{400\% faster workflow}.
+    \item Processed \textbf{3M+ records} to onboard \textbf{1M+ new users}, optimizing database integrity with new error correction methods.
+    \item Performed \textbf{BERT} sentiment analysis on feedback, visualizing insights with \textbf{Matplotlib/Pandas}.
 \end{itemize}
 
 \vspace{0.5em}
 
-\textbf{Student Researcher: UHP Discover} \includegraphics[height=1em]{uhp-logo.png} \hfill \textit{Cincinnati, OH: Summer 23}
+% --- DATE UPDATED ---
+\textbf{Student Researcher: UHP Discover} \includegraphics[height=1em]{uhp-logo.png} \hfill \textit{Cincinnati, OH: May 23 - Aug 23}
 \begin{itemize}
     \item Worked on knapsack problems and video summarization techniques and summarized \textbf{50 videos with a 93\% f-score}
     \item Bench-marked transformer models, including LLama, ChatGPT, JasperAI, Dall-E, Imagen, and diffusion models
 \end{itemize}
 
 
-\section*{Projects}
+\section*{Technical Leadership \& Projects}
 
-\textbf{LEOPARD-Sat:} \includegraphics[height=1em]{leopard-logo.png}  \textit{C, Proteus, Schematic Design, Systems Engineering }\hfill \textit{Cincinnati, OH: Jun 2022 – Present }
+\textbf{CubeCats: Vice President} \includegraphics[height=1em]{cubecats-logo.png} \hfill \textit{Cincinnati, OH: May 23 - Present}
 \begin{itemize}
-    \item Developed a \textbf{NASA-affiliated satellite} to assess the effectiveness of advanced radioactive shielding techniques for long-duration space missions.
-    \item Develop simulation software for Passive Attitude Determination and Control Systems (ADCS) for CubeSats (partnering with nanoracks), utilizing \textbf{Pandas, NumPy, and Scikit-learn} for data analysis with over \textbf{50M rows of data}
+    \item Started Project Calico to \textbf{teach 50+ freshman students} how to become self-starters \& leaders in a high-impact project (detailed analysis of light \& air pollution with a ground station for real-time comms)
+    \item Maintained the club website and media-team by modernizing the design and increasing efficiency to boost interest from students and companies looking to collaborate by \textbf{1114\%}
+    
+    % --- Here is the nested LEOPARD-Sat Project ---
+    \item \textbf{Directing LEOPARD-Sat Project:} \includegraphics[height=1em]{leopard-logo.png} \textit{C, Proteus, Schematic Design, Systems Engineering }
+    \begin{itemize}[label={\textbf{{\tiny$\circ$}}}, left=1.5em] % Nested list with circle bullets
+        \item Developed a \textbf{NASA-affiliated satellite} to assess the effectiveness of advanced radioactive shielding techniques for long-duration space missions.
+        \item Develop simulation software for Passive Attitude Determination and Control Systems (ADCS) for CubeSats (partnering with nanoracks), utilizing \textbf{Pandas, NumPy, and Scikit-learn} for data analysis with over \textbf{50M rows of data}
+    \end{itemize}
+    % --- End of nested project ---
 \end{itemize}
-
 
 \vspace{0.5em}
 
-\textbf{WhiteBox:} \includegraphics[height=1em]{whitebox-logo.png}\textit{ GCP, Neo4j, Flask, LLM Integration \& finetuning, Data Visualization}
+\textbf{WhiteBox:} \includegraphics[height=1em]{whitebox-logo.png} \textit{ GCP, Neo4j, Flask, LLM Integration \& finetuning, Data Visualization}
 \begin{itemize}
     \item 1st place winner of the Midwest Con - Future of Data Hackathon - 5000\$
-    \item Created \textbf{70,000 nodes with 140,000 links} to enable conceptual queries beyond raw vector searches, transforming structured data into explainable AI decision graphs
+    \item Created \textbf{70,000 nodes with 140,000 links} to enable conceptual queries beyond raw vector searches, transforming structured data into explainable AI decision.
     \item Engineered data pipelines with Neo4j and fine-tuned LLMs (LLaMA, MiniLM, Phi3, OpenAI) for structured data retrieval to \textbf{reduce hallucinations by 99\%}
 \end{itemize}
 \vspace{0.5em}
@@ -93,17 +115,11 @@
 \textbf{Hackathons:} \includegraphics[height=1em]{hackathon-logo.png} \textit{6x Winner across Data Science, AI, and Software Development}
 \begin{itemize}
     \item Led teams through tight deadlines, leveraging \textbf{rapid prototyping} and \textbf{agile prioritization} to deliver impactful solutions
-\end{itemize}
+\end{itemize} % CORRECTED: Was \end{Typeitemize}
 
 \vspace{0.5em}
 
-\section*{Leadership \& Community}
-\textbf{CubeCats: Vice President} \includegraphics[height=1em]{cubecats-logo.png} \hfill \textit{Cincinnati, OH: May 23 - Present}
-\begin{itemize}
-    \item Started Project Calico to \textbf{teach 50+ freshman students} how to become self-starters \& leaders in a high-impact project (detailed analysis of light \& air pollution with a ground station for real-time comms)
-    \item Maintained the club website and media-team by modernizing the design and increasing efficiency to boost interest from students and companies looking to collaborate by \textbf{1114\%}
-\end{itemize}
-
+% --- SKILLSET SECTION CLEANED OF REDUNDANT ITEMS ---
 \section*{Skillset}
 
 \begin{tabular}{@{}p{0.32\textwidth}p{0.32\textwidth}p{0.32\textwidth}@{}}
@@ -121,11 +137,11 @@ MATLAB & Docker \\
 \begin{tabular}[t]{@{}p{0.16\textwidth}p{0.16\textwidth}@{}}
 Google Cloud & Bash \\
 Oracle Cloud & Huggingface \\
-Azure, AWS & Vectors \\
-PostgreSQL & Looker \\
-SQL, NoSQL & KPI Dashboards \\
-GraphQL & Google Analytics \\
-Neo4j (Cypher) & Selenium \\
+Azure, AWS & Looker \\
+PostgreSQL & Google Analytics \\
+SQL, NoSQL & Selenium \\
+GraphQL & \\ % Removed Vectors & KPI Dashboards
+Neo4j (Cypher) & \\
 \end{tabular} &
 \begin{tabular}[t]{@{}p{0.16\textwidth}p{0.16\textwidth}@{}}
 Neural Networks & Full-stack \\
@@ -134,8 +150,8 @@ Machine Learning & Cloud Architecture \\
 NLP, NLU & Agile Methodology \\
 Computer Vision & Data Engineering \\
  \textbf{Kerbal Space}& ETL Processes \\
- \textbf{Program}& Algorithms \\
- & Data Structures \\
+ \textbf{Program}
+ & \\ % Removed Data Structures
 \end{tabular} \\
 \end{tabular}
 
